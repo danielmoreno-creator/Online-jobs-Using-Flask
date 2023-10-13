@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Job</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <h1>Edit Job</h1>
+    <form method="POST">
+        <label for="job_title">Job Title:</label>
+        <input type="text" name="job_title" value="{{ job_listing.job_title }}" required><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" name="company_name" value="{{ job_listing.company_name }}" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" value="{{ job_listing.location }}" required><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea name="job_description" required>{{ job_listing.job_description }}</textarea><br>
+
+        <label for="application_instructions">Application Instructions:</label>
+        <textarea name="application_instructions" required>{{ job_listing.application_instructions }}</textarea><br>
+
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

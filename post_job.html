@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Job</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <h1>Post Job</h1>
+    <form method="POST">
+        <label for="job_title">Job Title:</label>
+        <input type="text" name="job_title" required><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" name="company_name" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="job_description">Job Description:</label>
+        <textarea name="job_description" required></textarea><br>
+
+        <label for="application_instructions">Application Instructions:</label>
+        <textarea name="application_instructions" required></textarea><br>
+
+        <input type="submit" value="Post Job">
+    </form>
+</body>
+</html>
